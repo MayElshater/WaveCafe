@@ -58,7 +58,7 @@ class ContactUsController extends Controller
 
             // If the category with the given ID is not found, handle the case
             if (!$message) {
-                return redirect()->back()->with('error', 'Beverage not found.');
+                return redirect()->back()->with('error', 'Message not found.');
             }
 
             
@@ -67,7 +67,7 @@ class ContactUsController extends Controller
             $message->delete();
 
             // Redirect to beverages index page with success message
-            return redirect()->route('admin.messages')->with('success', 'Beverage deleted successfully.');
+            return redirect()->route('admin.messages')->with('success', 'Message deleted successfully.');
     }
     
 

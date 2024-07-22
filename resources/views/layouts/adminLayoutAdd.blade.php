@@ -45,5 +45,6 @@
       </div>
     </div>
     @include('admin.adminIncludes.footerjsAdd')
+    @include('admin.adminIncludes.Cancel')
   </body>
 </html>

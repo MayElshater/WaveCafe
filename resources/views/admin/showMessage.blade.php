@@ -32,6 +32,14 @@
                    <br>
                   <h2>Message Content:</h2>
                   <p>{{$message->message}}</p>
+                  <!-- Delete Button Form -->
+                <form action="{{ route('admin.deleteMessage', $message->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to permanently delete this message?');" style="display: inline;">
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+                <!-- Cancel Button -->
+                <button id="cancel-button" class="btn btn-primary" type="button">Cancel</button>
                 </div>
               </div>
             </div>
